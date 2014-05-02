@@ -18,17 +18,18 @@
 			FB.api('/me', function(info) {
 			    console.log(info);
 			    //document.getElementById('welcome').innerHTML="Welcome Mr " + info.first_name;  Javascript version
-			    $('#welcome').html("Welcome Mr " + info.first_name ); //jQuery Version
+			    $('#welcome').html("<h2>Welcome Mr " + info.first_name +"</h2>" ); //jQuery Version
 			    //document.getElementById('img1').src='http://graph.facebook.com/'+info.username+'/picture?type=large';
 			    $('#img1').attr("src","https://graph.facebook.com/"+ info.username + "/picture?type=large");
+			    $('#msg').html("<h2>Here is some of your info we received </h2>");
 			    //document.getElementById('bio').innerHTML="Your Bio : " + info.bio;
-			    $('#bio').html("Your Bio : "+ info.bio);
+			    $('#bio').html("<p><b>Your Bio : </b>"+ info.bio + "</p>");
 			    //document.getElementById('bday').innerHTML="Your Birthday : " + info.birthday;
-			    $('#bday').html("Your Birthday : " + info.birthday);
+			    $('#bday').html("<p><b>Your Birthday : </b>" + info.birthday +"</p>");
 			    //document.getElementById('email').innerHTML="Your email: " + info.email;
-			    $('#email').html("Your email: " + info.email);
+			    $('#email').html("<p><b>Your email: </b>" + info.email + "</p>");
 			    //document.getElementById('uname').innerHTML="Your username: " + info.username;
-			    $('#uname').html("Your username: " + info.username);
+			    $('#uname').html("<p><b>Your username: </b>" + info.username + "</p>");
 			    
 			    
 			 });
