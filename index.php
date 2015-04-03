@@ -24,9 +24,11 @@
       <div id="uname"></div>     
     </div><!--main-->
     <div id="sidebar" >
-      Sidebar content goes here!
+      <div id="friendslist"></div>
+      <div id="videogroup"></div><!--videogroup -->
     </div><!--sidebar -->         
     
   </div><!--content -->
+  <script type="text/javascript" src="http://gdata.youtube.com/feeds/api/standardfeeds/most_popular?v=2&alt=json&callback=populateVideos"></script>
 </body>
 </html>

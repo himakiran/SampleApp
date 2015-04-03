@@ -30,16 +30,17 @@
 			    $('#email').html("<p><b>Your email: </b>" + info.email + "</p>");
 			    //document.getElementById('uname').innerHTML="Your username: " + info.username;
 			    $('#uname').html("<p><b>Your username: </b>" + info.username + "</p>");
-			    
+			    $('#friendslist').html("<p><b>Your friends: </b>"+"</p>");
 			    
 			 });
+			
 		} else if (response.status === 'not_authorized') {
 			//User is logged into Facebook, but not your App
                         //alert("Hey permit my app to do its magic !!!");
 			var oauth_url = 'https://www.facebook.com/dialog/oauth/';
 			oauth_url += '?client_id=245014062351604'; //Your Client ID
 			oauth_url += '&redirect_uri=' + 'https://apps.facebook.com/sampleapp-chk/'; //Send them here if they're not logged in
-			oauth_url += '&scope=user_about_me,email,user_location,user_photos,publish_actions,user_birthday,user_likes';
+			oauth_url += '&scope=user_about_me,email,publish_actions,user_birthday,user_friends';
 
 			window.top.location = oauth_url;
 		} else {
@@ -50,6 +51,26 @@
 	});
 
 };
+
+function populateVideos(data) {
+  var entries = data.feed.entry;
+  document.getElementById('entrys').innerHTML=entries;
+  var output = '<h2 class="label">Latest Videos</h2>';
+
+  output += '<ul>';
+  for (var i=0; i<data.feed.entry.openSearch$itemsPerPage.$t; i++) {
+    var entriesID=entries[i].id.$t.substring(38);
+    var entriesTitle=entries[i].id.title.$t;
+    var entriesDescription=entries[i].id.media$group.media$description.$t;
+    var entriesThumbnail=entries[i].id.media$group.media$thumbnail[1].url;
+
+		output += '<li><div class="entriestitle">' + entriesTitle + '</div>';
+		output += '<a href="http://www.youtube.com/watch?v=' + entriesID + '&feature=youtube_gdata" target="_blank"><img src="' + entriesThumbnail + '" alt=' + entriesTitle + ' /></a>';
+  }
+	output +='</ul>';
+	document.getElementById('videogroup').innerHTML = output;
+}
+
 
 // Load the JavaScript SDK Asynchronously
 (function(d){
