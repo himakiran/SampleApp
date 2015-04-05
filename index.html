@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/chk-style.css">
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="_/js/fbscript.js"></script>
+    <script type="text/javascript" src="js/fbscript.js"></script>
   </head>
   <body>
     <!--  TO MAKE DIVS VISIBLE FOR YOU TO ALIGN ELEMENTS AND  DESIGN THE PAGE APPLY BACKGROUND STYLE TO EACH DIV AS SHOWN  :
@@ -56,23 +56,20 @@
 
     <!-- MODAL CODE FOLLOWS WHICH OPENS A LOGIN WINDOWS WHEN MOUSE IS CLICKED ON CENTER IMAGE -->
 
-  <div class="modal fade" id="fbLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Login with your Facebook ID</h4>
-      </div>
-      <div class="modal-body" class="status"> </div>
-      <div class="modal-footer">
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <div class="modal fade" id="fbLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">Login with your Facebook ID</h4>
+          </div>
+          <div class="modal-body" class="status"> </div>
+          <div class="modal-footer">
+            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-
-  </div>
-
   </body>
-  </
-  >
+</html>
