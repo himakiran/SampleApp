@@ -1,3 +1,4 @@
+/* THIS FILE OVERRULES THE BOOTSTRAP CSS FILE. This file has to be included below the bootstrap css file in HTML code */
 h1
 {
 	font-size: 54px;
@@ -7,6 +8,18 @@ h1
 	color: #3a5795;
 
 }
+
+h4
+{
+	font-size: 34px;
+	font-family: Orbitron;
+	font-weight: 900;
+
+	color: #3a5795;
+
+}
+
+/*  THE CODE BELOW TILL .centering IS TO CENTER AN ELEMENT  */
 .container-fluid{
   height:100%;
   display:table;
@@ -21,4 +34,13 @@ h1
 .centering {
   float:none;
   margin:0 auto;
+}
+
+/*---------------------------------------------------*/
+
+img:hover
+{
+	-moz-box-shadow: 0 0 100px #3366FF;
+	-webkit-box-shadow: 0 0 100px #3366FF;
+	box-shadow: 0 0 100px #3366FF;
 }
