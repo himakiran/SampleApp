@@ -67,25 +67,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  // code copied from stack-overflow and modified to hide the fb-login button if user is already logged in
-  function ShowFbLogin(ShowLogin)
-        {
-            var div_FBLogin = document.getElementById('fb:login-button');
-            //var spn_FBLogin = document.getElementById('fb-login');
-            //var div_FBShare = document.getElementById('fbshare');
 
-            if (ShowLogin)
-            {
-                div_FBLogin.style.display = 'visible';
-                //div_FBShare.style.visibility = 'hidden';
-            }
-            else
-            {
-                div_FBLogin.style.display = 'hidden';
-                //spn_FBLogin.style.visibility = 'collapse';
-                //div_FBShare.style.visibility = 'visible';
-            }
-        }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
@@ -96,7 +78,7 @@
         'Thanks for logging in ' + '!';
       document.getElementById('myModalLabel').innerHTML =
         'Welcome to your circle ' + response.name + '!';
-      ShowFbLogin(false);
+
     });
     var uid = response.authResponse.userID;
     accessToken = response.authResponse.accessToken;
