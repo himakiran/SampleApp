@@ -67,23 +67,23 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  // code copied from stack-overflow to hide the fb-login button if user is already logged in
+  // code copied from stack-overflow and modified to hide the fb-login button if user is already logged in
   function ShowFbLogin(ShowLogin)
         {
-            var div_FBLogin = document.getElementById('fblogin');
-            var spn_FBLogin = document.getElementById('fb-login');
-            var div_FBShare = document.getElementById('fbshare');
+            var div_FBLogin = document.getElementById('fb:login-button');
+            //var spn_FBLogin = document.getElementById('fb-login');
+            //var div_FBShare = document.getElementById('fbshare');
 
             if (ShowLogin)
             {
                 div_FBLogin.style.visibility = 'visible';
-                div_FBShare.style.visibility = 'hidden';
+                //div_FBShare.style.visibility = 'hidden';
             }
             else
             {
                 div_FBLogin.style.visibility = 'collapse';
-                spn_FBLogin.style.visibility = 'collapse';
-                div_FBShare.style.visibility = 'visible';
+                //spn_FBLogin.style.visibility = 'collapse';
+                //div_FBShare.style.visibility = 'visible';
             }
         }
   // Here we run a very simple test of the Graph API after login is
