@@ -73,10 +73,8 @@
           </div>
           <div class="modal-body text-right text-capitalize text-success" id="status"> </div>
           <div class="modal-footer">
-
-            <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true">
-              <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
-            </div>
+          <fb:login-button scope="public_profile,email" data-auto-logout-link="true" onlogin="checkLoginState();"> </fb:login-button>
+            <!--<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true"> </div>-->
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
