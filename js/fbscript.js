@@ -36,6 +36,7 @@
     cookie     : true,  // enable cookies to allow the server to access
                         // the session
     xfbml      : true,  // parse social plugins on this page
+    status     : true,  // the SDK will attempt to get info about the current user immediately after init
     version    : 'v2.2' // use version 2.2
   });
 
