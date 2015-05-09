@@ -76,12 +76,12 @@
 
             if (ShowLogin)
             {
-                div_FBLogin.style.visibility = 'visible';
+                div_FBLogin.style.display = 'visible';
                 //div_FBShare.style.visibility = 'hidden';
             }
             else
             {
-                div_FBLogin.style.visibility = 'hidden';
+                div_FBLogin.style.display = 'hidden';
                 //spn_FBLogin.style.visibility = 'collapse';
                 //div_FBShare.style.visibility = 'visible';
             }
