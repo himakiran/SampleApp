@@ -81,7 +81,7 @@
             }
             else
             {
-                div_FBLogin.style.visibility = 'collapse';
+                div_FBLogin.style.visibility = 'hidden';
                 //spn_FBLogin.style.visibility = 'collapse';
                 //div_FBShare.style.visibility = 'visible';
             }
