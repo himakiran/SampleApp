@@ -77,5 +77,11 @@
         'Thanks for logging in ' + '!';
       document.getElementById('myModalLabel').innerHTML =
         'Welcome to your circle ' + response.name + '!';
+      document.getElementById('modal-footer').innerHTML =
+        '<fb:login-button aria-hidden="true" scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>' + '\br'
+            + '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
     });
+    var uid = response.authResponse.userID;
+    accessToken = response.authResponse.accessToken;
+    startAPP(uid,accessToken);
   }
