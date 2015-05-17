@@ -73,6 +73,10 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
+  function startAPP(){
+    console.log('moving to new window');
+    window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
+  }
 
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
@@ -86,12 +90,8 @@
         'Welcome to your circle ' + response.name + '!';
 
     });
-    var uid = response.authResponse.userID;
-    accessToken = response.authResponse.accessToken;
+    //var uid = response.authResponse.userID;
+    //accessToken = response.authResponse.accessToken;
     startAPP();
   }
 
-  function startAPP(){
-    console.log('moving to new window');
-    window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
-  }
