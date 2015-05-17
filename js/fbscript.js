@@ -93,6 +93,6 @@
     });
     //var uid = response.authResponse.userID;
     //accessToken = response.authResponse.accessToken;
-    startAPP();
+    //startAPP();
   }
 
