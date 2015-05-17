@@ -79,6 +79,11 @@
     window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
   }
 
+  function goBack() {
+    console.log('moving to start page');
+    window.location.href = "https://www1.chundi.biz/SampleApp/index.html";
+  }
+
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
