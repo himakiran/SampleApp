@@ -73,7 +73,8 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-  function startAPP(){
+//startAPP shoud be defined before it is called hence it is defined here before testAPI() where it has been called
+  function startAPP() {
     console.log('moving to new window');
     window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
   }
