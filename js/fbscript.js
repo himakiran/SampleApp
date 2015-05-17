@@ -1,3 +1,4 @@
+// This commit the login window is fully functional
 // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
