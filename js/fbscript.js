@@ -92,5 +92,5 @@
   }
   function startAPP(uid,accessToken){
     console.log('moving to new window');
-    window.location.href = "https://www1.chundi.biz/home.html";
+    window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
   }
