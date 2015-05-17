@@ -88,9 +88,10 @@
     });
     var uid = response.authResponse.userID;
     accessToken = response.authResponse.accessToken;
-    startAPP(uid,accessToken);
+    startAPP();
   }
-  function startAPP(uid,accessToken){
+
+  function startAPP(){
     console.log('moving to new window');
     window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
   }
