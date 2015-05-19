@@ -87,9 +87,9 @@
   function replacePics(response) {
     var uid = response.userID;
     //accessToken = response.authResponse.accessToken;
-    var imgObj = 'https://graph.facebook.com/v2.3/uid/picture?redirect=false';
+    var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false");
     var imgUrl = imgObj.data.url;
-    document.getElementById("center-pic").src=img-url;
+    document.getElementById("center-pic").src=imgUrl;
   }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
