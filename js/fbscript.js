@@ -84,6 +84,13 @@
     window.location.href = "https://www1.chundi.biz/SampleApp/index.html";
   }
 
+  function replacePics(response) {
+    var uid = response.authResponse.userID;
+    //accessToken = response.authResponse.accessToken;
+    var img-obj = 'https://graph.facebook.com/v2.3/uid/picture?redirect=false';
+    var img-url = img-obj.data.url;
+    document.getElementById("center-pic").src=img-url;
+  }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
@@ -94,10 +101,11 @@
         'Thanks for logging in ' + '!';
       document.getElementById('myModalLabel').innerHTML =
         'Welcome to your circle ' + response.name + '!';
+      replacePics();
 
     });
-    //var uid = response.authResponse.userID;
-    //accessToken = response.authResponse.accessToken;
+
     //startAPP();
   }
+
 
