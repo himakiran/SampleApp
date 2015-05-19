@@ -85,7 +85,7 @@
   }
 
   function replacePics(response) {
-    var uid = response.authResponse.userID;
+    var uid = response.userID;
     //accessToken = response.authResponse.accessToken;
     var imgObj = 'https://graph.facebook.com/v2.3/uid/picture?redirect=false';
     var imgUrl = imgObj.data.url;
