@@ -73,7 +73,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
 
-//startAPP shoud be defined before it is called hence it is defined here before testAPI() where it has been called
+
   function startAPP() {
     console.log('moving to new window');
     window.location.href = "https://www1.chundi.biz/SampleApp/home.html";
@@ -87,8 +87,8 @@
   function replacePics(response) {
     var uid = response.authResponse.userID;
     //accessToken = response.authResponse.accessToken;
-    var img-obj = 'https://graph.facebook.com/v2.3/uid/picture?redirect=false';
-    var img-url = img-obj.data.url;
+    var imgObj = 'https://graph.facebook.com/v2.3/uid/picture?redirect=false';
+    var imgUrl = imgObj.data.url;
     document.getElementById("center-pic").src=img-url;
   }
   // Here we run a very simple test of the Graph API after login is
@@ -101,11 +101,11 @@
         'Thanks for logging in ' + '!';
       document.getElementById('myModalLabel').innerHTML =
         'Welcome to your circle ' + response.name + '!';
-      replacePics();
+      replacePics(response);
 
     });
 
-    //startAPP();
+
   }
 
 
