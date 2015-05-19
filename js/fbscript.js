@@ -87,7 +87,7 @@
   function replacePics(response) {
     var uid = response.userID;
     //accessToken = response.authResponse.accessToken;
-    var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false");
+    var imgObj = JSON.parse($.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false");)
     var imgUrl = imgObj.data.url;
     document.getElementById("center-pic").src=imgUrl;
   }
