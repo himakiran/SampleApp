@@ -86,9 +86,12 @@
 
   function replacePics(response) {
     var uid = response.userID;
+    console.log(uid);
     //accessToken = response.authResponse.accessToken;
     var imgObj = JSON.parse($.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false"));
+    console.log(imgObj);
     var imgUrl = imgObj.data.url;
+    console.log(imgUrl);
     document.getElementById("center-pic").src=imgUrl;
   }
   // Here we run a very simple test of the Graph API after login is
