@@ -105,8 +105,9 @@
         'Thanks for logging in ' + '!';
       document.getElementById('myModalLabel').innerHTML =
         'Welcome to your circle ' + response.name + '!';
-      replacePics(response);  }
-  });
+      replacePics(response);
+    });
+  }
 
 
 
