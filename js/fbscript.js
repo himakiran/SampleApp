@@ -88,7 +88,7 @@
     var uid = response.id;
     console.log(uid);
     //accessToken = response.authResponse.accessToken;
-    var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false");
+    var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture");
     console.log(imgObj);
     var imgUrl = imgObj.responseJSON.data.url;
     console.log(imgUrl);
