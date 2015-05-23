@@ -89,7 +89,7 @@
     console.log(uid);
     //accessToken = response.authResponse.accessToken;
     $.getJSON('https://graph.facebook.com/v2.3/638670123/picture?redirect=false', function(data) {
-      console.log(data.url);
+      console.log(data);
     document.getElementById("center-pic").src = data.url;
     });
   }
