@@ -90,7 +90,7 @@
     //accessToken = response.authResponse.accessToken;
     $.getJSON('https://graph.facebook.com/v2.3/638670123/picture?redirect=false', function(data) {
       console.log(data);
-    document.getElementById("center-pic").src = data.url;
+    document.getElementById("center-pic").src = data.url + new Date().getTime() ;
     });
   }
   // Here we run a very simple test of the Graph API after login is
