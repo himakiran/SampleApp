@@ -88,11 +88,9 @@
     var uid = response.id;
     console.log(uid);
     //accessToken = response.authResponse.accessToken;
-    var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture");
-    console.log(imgObj);
-    var imgUrl = imgObj.responseJSON.data.url;
-    console.log(imgUrl);
-    document.getElementById("center-pic").src=imgUrl;
+    $.getJSON('https://graph.facebook.com/v2.3/638670123/picture?redirect=false', function(data) {
+    document.getElementById("center-pic").src = data.url;
+    });
   }
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
