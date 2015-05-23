@@ -90,7 +90,7 @@
     //accessToken = response.authResponse.accessToken;
     var imgObj = $.getJSON("https://graph.facebook.com/v2.3/uid/picture?redirect=false");
     console.log(imgObj);
-    var imgUrl = imgObj.data.url;
+    var imgUrl = imgObj.responseJSON.data.url;
     console.log(imgUrl);
     document.getElementById("center-pic").src=imgUrl;
   }
