@@ -91,7 +91,6 @@
     $.getJSON('https://graph.facebook.com/v2.3/638670123/picture?redirect=false', function(data) {
       console.log(data);
     document.getElementById("center-pic").src = data.url + new Date().getTime() ;
-     console.log(document.getElementById("center-pic").src);
     });
   }
   // Here we run a very simple test of the Graph API after login is
